@@ -1,0 +1,49 @@
+version: "3.7"
+
+services:
+
+  mysql:
+    image: yobasystems/alpine-mariadb
+    container_name: mysql
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+    ports:
+      - "3306:3306"
+    expose:
+      - "3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    restart: always
+
+  composer:
+    image: composer:latest
+    command: [ "composer", "install" ]
+    volumes:
+      - ./:/var/www/html
+
+  nginx:
+    restart: always
+    build:
+      context: ./nginx
+    ports:
+      - '3050:80'
+
+  frontend:
+    build:
+      context: ./frontend
+    volumes:
+      - /app/node_modules
+      - ./frontend:/app  
+
+  backend:
+    build:
+      context: ./backend
+    volumes:
+      - /app/node_modules
+      - ./backend:/app
+
+volumes:
+  mysql-data: {}
