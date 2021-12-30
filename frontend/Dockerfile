@@ -6,7 +6,7 @@
 # RUN npm i
 # CMD ["npm", "run", "start"]
 
-FROM node:alpine as builder
+FROM node:14.18.2-alpine3.14 as builder
 WORKDIR '/app'
 
 COPY ./package.json ./
