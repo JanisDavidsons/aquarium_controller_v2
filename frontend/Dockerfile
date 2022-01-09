@@ -1,20 +1,19 @@
-# FROM node:alpine
-# WORKDIR /app
-# COPY package.json ./
-# COPY package-lock.json ./
-# COPY ./ ./
-# RUN npm i
-# CMD ["npm", "run", "start"]
+FROM node:14.18.2-alpine3.14 as build-step
 
-FROM node:14.18.2-alpine3.14 as builder
-WORKDIR '/app'
+RUN mkdir /app
 
-COPY ./package.json ./
+WORKDIR /app
 
-COPY . .
+COPY package.json /app
+
+RUN npm install
+
+COPY . /app
+
+RUN npm run build
 
 FROM nginx
 EXPOSE 3000
-
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
-COPY --from=builder /app/build /usr/share/nginx/html
+
+COPY --from=build-step /app/build /usr/share/nginx/html
