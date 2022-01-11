@@ -18,12 +18,6 @@ services:
       - mysql-data:/var/lib/mysql
     restart: always
 
-  composer:
-    image: composer:latest
-    command: [ "composer", "install" ]
-    volumes:
-      - ./:/var/www/html
-
   nginx:
     restart: always
     build:
