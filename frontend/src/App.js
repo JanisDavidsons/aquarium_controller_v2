@@ -24,10 +24,11 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          This will be aquarium controller app v2.
+          This will be aquarium controller v2.
         </p>
         <p>
-        This is complete rebuild from previous version
+        This is complete rebuild from previous version. Backend will be written in php instead of c langguage. Will be using 
+        Lumen framework for backend, React in frontend and MariaDB database.
         </p>
         <a
           className="App-link"

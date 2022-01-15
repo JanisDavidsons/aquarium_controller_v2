@@ -1,9 +1,0 @@
-# version: '3.8'
-
-# services:
-#   backend:
-#     image: janisdavidsons/api_aquarium_controller
-#     build:
-#       context: .
-#     ports:
-#       - "8080:8080"
