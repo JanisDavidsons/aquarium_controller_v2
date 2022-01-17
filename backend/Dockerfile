@@ -18,6 +18,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- \
 COPY config/nginx.conf /etc/nginx/nginx.conf
 COPY config/fpm-pool.conf /etc/php/7.4/fpm/pool.d/www.conf
 COPY config/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY ./run.sh /tmp
 
 # Make sure files/folders needed by the processes
 # are accessable when they run under the nobody user
@@ -35,17 +36,13 @@ WORKDIR /backend
 
 COPY ./ /backend/
 
-# RUN composer intall
-RUN composer install
-
 # Switch to use a non-root user from here on
 USER nobody
 
 # Expose php
 EXPOSE 3001
 
-# Let supervisord start nginx & php-fpm
-CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
+ENTRYPOINT ["/tmp/run.sh"]
 
 # Configure a healthcheck to validate that everything is up&running
 HEALTHCHECK --timeout=10s CMD curl http://127.0.0.1:3001/fpm-ping
