@@ -4,7 +4,7 @@ import { CssBaseline } from '@mui/material';
 import { MuiThemeProvider, createTheme, StylesProvider } from '@material-ui/core/styles';
 import { blueGrey, indigo, orange, red, green } from '@material-ui/core/colors';
 
-const theme = createMuiTheme({
+const theme = createTheme({
     palette: {
       primary: indigo,
       secondary: blueGrey,

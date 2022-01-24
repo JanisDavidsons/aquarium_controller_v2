@@ -1,41 +1,29 @@
-import React, { useEffect, useState } from 'react'
-import { Redirect, Route, Switch } from 'react-router';
+import React, { useEffect } from 'react'
+import { Navigate, Route, Routes } from 'react-router';
 import { SnackbarProvider } from 'notistack';
 import { IconButton } from '@mui/material';
 import CloseIcon from '@material-ui/icons/Close';
 
-import services from './services'
-import './App.css';
-import logo from './logo.svg';
+import AppRouting from './AppRouting';
+import { PROJECT_NAME } from './api';
 import CustomMuiTheme from './CustomMuiTheme';
+import FeaturesWrapper from './features/FeaturesWrapper';
+
 
 function App() {
 
-  const unauthorizedRedirect = () => <Redirect to="/" />;
-  const [values, setValues] = useState({ entity: '', data: [], newEntity: '' })
-  const [isCeateModalVisible, setCreateModalVisible] = useState( false )
-  const [isLoading, setLoading] = useState( false )
-  const [isSaving, setSaving] = useState( false )
+  const unauthorizedRedirect = () => <Navigate to="/" />;
 
-  notistackRef = React.createRef();
+  const notistackRef = React.createRef();
 
   useEffect(()=> {
     document.title = PROJECT_NAME;
   });
 
-  onClickDismiss = (key) => () => {
+  const onClickDismiss = (key) => () => {
     notistackRef.crrent.cloceSnackBar(key);
   }
 
-  async function handleSubmit( e ) {
-    e.preventDefault()
-
-    setLoading(true)
-    const entities = await services.searchEntities( values.entity )
-    setLoading(false)
-
-    console.log(entities);
-  } 
   return (
     <CustomMuiTheme>
         <SnackbarProvider maxSnack={3} anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
@@ -46,10 +34,10 @@ function App() {
             </IconButton>
           )}>
           <FeaturesWrapper>
-            <Switch>
+            <Routes>
               <Route exact path="/unauthorized" component={unauthorizedRedirect} />
               <Route component={AppRouting} />
-            </Switch>
+            </Routes>
           </FeaturesWrapper>
         </SnackbarProvider>
     </CustomMuiTheme>
