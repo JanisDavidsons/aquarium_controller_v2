@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Navigate, Routes } from 'react-router-dom'
 
-import { Tabs, Tab } from '@material-ui/core';
+import { Tabs, Tab } from '@mui/material';
 
 import { withAuthenticatedContext, AuthenticatedRoute } from '../authentication';
 import { MenuAppBar } from '../components';

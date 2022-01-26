@@ -1,7 +1,7 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/styles';
-import { Paper, Typography, Box, CssBaseline } from "@material-ui/core";
-import WarningIcon from "@material-ui/icons/Warning"
+import { makeStyles } from '@mui/styles';
+import { Paper, Typography, Box, CssBaseline } from "@mui/material";
+import WarningAmberIcon from '@mui/icons-material/WarningAmber';
 
 const styles = makeStyles(
   {
@@ -30,7 +30,7 @@ const ApplicationError = ({ error }) => {
       <CssBaseline />
       <Paper className={classes.siteErrorPagePanel} elevation={10}>
         <Box display="flex" flexDirection="row" justifyContent="center" alignItems="center" mb={2}>
-          <WarningIcon fontSize="large" color="error" />
+          <WarningAmberIcon fontSize="large" color="error" />
           <Box ml={2}>
             <Typography variant="h4">
               Application error

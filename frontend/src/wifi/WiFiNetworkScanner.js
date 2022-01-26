@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { withSnackbar } from 'notistack';
 
-import { createStyles, withStyles, Typography, LinearProgress } from '@material-ui/core';
-import PermScanWifiIcon from '@material-ui/icons/PermScanWifi';
+import { createStyles, withStyles, Typography, LinearProgress } from '@mui/material';
+import PermScanWifiIcon from '@mui/icons-material/PermScanWifi';
 
 import { FormActions, FormButton, SectionContent } from '../components';
 import { redirectingAuthorizedFetch } from '../authentication';

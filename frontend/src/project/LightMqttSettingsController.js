@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 
-import { Typography, Box } from '@material-ui/core';
-import SaveIcon from '@material-ui/icons/Save';
+import { Typography, Box } from '@mui/material';
+import SaveIcon from '@mui/icons-material/Save';
 
 import { ENDPOINT_ROOT } from '../api';
 import { restController, RestFormLoader, FormActions, FormButton, SectionContent } from '../components';

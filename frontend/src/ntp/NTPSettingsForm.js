@@ -1,8 +1,10 @@
 import React from 'react';
 import { TextValidator, ValidatorForm, SelectValidator } from 'react-material-ui-form-validator';
 
-import { Checkbox, MenuItem } from '@material-ui/core';
-import SaveIcon from '@material-ui/icons/Save';
+import { Checkbox } from '@mui/material';
+import MenuItem from '@mui/material/MenuItem';
+
+import SaveIcon from '@mui/icons-material/Save';
 
 import { FormActions, FormButton, BlockFormControlLabel } from '../components';
 import { isIP, isHostname, or } from '../validators';

@@ -1,14 +1,14 @@
 import React, { Component, Fragment } from 'react';
 
-import { withTheme } from '@material-ui/core/styles';
-import { Avatar, Divider, List, ListItem, ListItemAvatar, ListItemText } from '@material-ui/core';
+import { withTheme } from '@mui/styles';
+import { Avatar, Divider, List, ListItem, ListItemAvatar, ListItemText } from '@mui/material';
 
-import DNSIcon from '@material-ui/icons/Dns';
-import WifiIcon from '@material-ui/icons/Wifi';
-import SettingsInputComponentIcon from '@material-ui/icons/SettingsInputComponent';
-import SettingsInputAntennaIcon from '@material-ui/icons/SettingsInputAntenna';
-import DeviceHubIcon from '@material-ui/icons/DeviceHub';
-import RefreshIcon from '@material-ui/icons/Refresh';
+import DNSIcon from '@mui/icons-material/Dns';
+import WifiIcon from '@mui/icons-material/Wifi';
+import SettingsInputComponentIcon from '@mui/icons-material/SettingsInputComponent';
+import SettingsInputAntennaIcon from '@mui/icons-material/SettingsInputAntenna';
+import DeviceHubIcon from '@mui/icons-material/DeviceHub';
+import RefreshIcon from '@mui/icons-material/Refresh';
 
 import { FormActions, FormButton, HighlightAvatar } from '../components';
 import { wifiStatus, wifiStatusHighlight, isConnected } from './WiFiStatus';

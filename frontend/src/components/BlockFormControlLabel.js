@@ -1,5 +1,5 @@
 import React from "react";
-import { FormControlLabel } from "@material-ui/core";
+import { FormControlLabel } from "@mui/material";
 
 const BlockFormControlLabel = (props) => (
   <div>

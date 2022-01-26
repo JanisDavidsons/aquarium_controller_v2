@@ -1,7 +1,7 @@
 import React from 'react';
 import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator';
 
-import { Dialog, DialogTitle, DialogContent, DialogActions, Checkbox } from '@material-ui/core';
+import { Dialog, DialogTitle, DialogContent, DialogActions, Checkbox } from '@mui/material';
 
 import { PasswordValidator, BlockFormControlLabel, FormButton } from '../components';
 

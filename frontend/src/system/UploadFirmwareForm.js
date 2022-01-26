@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { SingleUpload } from '../components';
-import { Box } from '@material-ui/core';
+import { Box } from '@mui/material';
 
 class UploadFirmwareForm extends React.Component {
 

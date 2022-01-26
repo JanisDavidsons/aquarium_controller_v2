@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { ValidatorForm } from 'react-material-ui-form-validator';
 
-import { Typography, Box, Switch } from '@material-ui/core';
+import { Typography, Box, Switch } from '@mui/material';
 import { WEB_SOCKET_ROOT } from '../api';
 import {  WebSocketFormLoader, webSocketController } from '../components';
 import { SectionContent, BlockFormControlLabel } from '../components';

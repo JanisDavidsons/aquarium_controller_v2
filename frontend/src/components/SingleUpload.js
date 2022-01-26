@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
 import { useDropzone } from 'react-dropzone';
 
-import { makeStyles, createStyles } from '@material-ui/styles';
-import CloudUploadIcon from '@material-ui/icons/CloudUpload';
-import CancelIcon from '@material-ui/icons/Cancel';
-import { Box, Typography, LinearProgress, Button } from '@material-ui/core';
+import { makeStyles, createStyles } from '@mui/styles';
+import CloudUploadIcon from '@mui/icons-material/CloudUpload';
+import CancelIcon from '@mui/icons-material/Cancel';
+import { Box, Typography, LinearProgress, Button } from '@mui/material';
 
 const progressPercentage = (progress) => Math.round((progress.loaded * 100) / progress.total);
 

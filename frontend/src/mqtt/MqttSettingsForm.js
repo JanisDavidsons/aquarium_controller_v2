@@ -1,8 +1,8 @@
 import React from 'react';
 import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator';
 
-import { Checkbox, TextField } from '@material-ui/core';
-import SaveIcon from '@material-ui/icons/Save';
+import { Checkbox, TextField } from '@mui/material';
+import SaveIcon from '@mui/icons-material/Save';
 
 import { FormActions, FormButton, BlockFormControlLabel, PasswordValidator } from '../components';
 import { isIP, isHostname, or } from '../validators';

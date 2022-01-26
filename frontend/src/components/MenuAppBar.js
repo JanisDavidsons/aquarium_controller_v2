@@ -1,21 +1,21 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 
-import { Drawer, AppBar, Toolbar, Avatar, Divider, Button, Box, IconButton } from '@material-ui/core';
-import { ClickAwayListener, Popper, Hidden, Typography } from '@material-ui/core';
-import { List, ListItem, ListItemIcon, ListItemText, ListItemAvatar } from '@material-ui/core';
-import { Card, CardContent, CardActions } from '@material-ui/core';
+import { Drawer, AppBar, Toolbar, Avatar, Divider, Button, Box, IconButton } from '@mui/material';
+import { ClickAwayListener, Popper, Hidden, Typography } from '@mui/material';
+import { List, ListItem, ListItemIcon, ListItemText, ListItemAvatar } from '@mui/material';
+import { Card, CardContent, CardActions } from '@mui/material';
 
-import { withStyles, createStyles, withTheme } from '@material-ui/core/styles';
+import { withStyles, createStyles, withTheme } from '@mui/styles';
 
-import WifiIcon from '@material-ui/icons/Wifi';
-import SettingsIcon from '@material-ui/icons/Settings';
-import AccessTimeIcon from '@material-ui/icons/AccessTime';
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
-import SettingsInputAntennaIcon from '@material-ui/icons/SettingsInputAntenna';
-import DeviceHubIcon from '@material-ui/icons/DeviceHub';
-import LockIcon from '@material-ui/icons/Lock';
-import MenuIcon from '@material-ui/icons/Menu';
+import WifiIcon from '@mui/icons-material/Wifi';
+import SettingsIcon from '@mui/icons-material/Settings';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import SettingsInputAntennaIcon from '@mui/icons-material/SettingsInputAntenna';
+import DeviceHubIcon from '@mui/icons-material/DeviceHub';
+import LockIcon from '@mui/icons-material/Lock';
+import MenuIcon from '@mui/icons-material/Menu';
 
 import ProjectMenu from '../project/ProjectMenu';
 import { PROJECT_NAME } from '../api';

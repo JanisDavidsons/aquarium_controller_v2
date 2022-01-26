@@ -1,11 +1,11 @@
 import React, { Component, Fragment } from 'react';
 
-import { withTheme } from '@material-ui/core/styles';
-import { Avatar, Divider, List, ListItem, ListItemAvatar, ListItemText } from '@material-ui/core';
+import { withTheme } from '@mui/styles';
+import { Avatar, Divider, List, ListItem, ListItemAvatar, ListItemText } from '@mui/material';
 
-import DeviceHubIcon from '@material-ui/icons/DeviceHub';
-import RefreshIcon from '@material-ui/icons/Refresh';
-import ReportIcon from '@material-ui/icons/Report';
+import DeviceHubIcon from '@mui/icons-material/DeviceHub';
+import RefreshIcon from '@mui/icons-material/Refresh';
+import ReportIcon from '@mui/icons-material/Report';
 
 import { FormActions, FormButton, HighlightAvatar } from '../components';
 import { mqttStatusHighlight, mqttStatus, disconnectReason } from './MqttStatus';

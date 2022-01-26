@@ -1,4 +1,4 @@
-import { Button, styled } from "@material-ui/core";
+import { Button, styled } from "@mui/material"
 
 const FormButton = styled(Button)(({ theme }) => ({
   margin: theme.spacing(0, 1),

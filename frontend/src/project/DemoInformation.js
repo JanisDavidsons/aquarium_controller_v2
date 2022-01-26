@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Typography, Box, List, ListItem, ListItemText } from '@material-ui/core';
+import { Typography, Box, List, ListItem, ListItemText } from '@mui/material';
 import { SectionContent } from '../components';
 
 class DemoInformation extends Component {

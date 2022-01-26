@@ -1,12 +1,12 @@
 import React, { Component, Fragment } from 'react';
 
-import { withTheme } from '@material-ui/core/styles';
-import { Avatar, Divider, List, ListItem, ListItemAvatar, ListItemText } from '@material-ui/core';
+import { withTheme } from '@mui/styles';
+import { Avatar, Divider, List, ListItem, ListItemAvatar, ListItemText } from '@mui/material';
 
-import SettingsInputAntennaIcon from '@material-ui/icons/SettingsInputAntenna';
-import DeviceHubIcon from '@material-ui/icons/DeviceHub';
-import ComputerIcon from '@material-ui/icons/Computer';
-import RefreshIcon from '@material-ui/icons/Refresh';
+import SettingsInputAntennaIcon from '@mui/icons-material/SettingsInputAntenna';
+import DeviceHubIcon from '@mui/icons-material/DeviceHub';
+import ComputerIcon from '@mui/icons-material/Computer';
+import RefreshIcon from '@mui/icons-material/Refresh';
 
 import { FormActions, FormButton, HighlightAvatar } from '../components';
 import { apStatusHighlight, apStatus } from './APStatus';

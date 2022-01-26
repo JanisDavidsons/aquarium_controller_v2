@@ -1,16 +1,16 @@
 import React, { Component, Fragment } from 'react';
 import moment from 'moment';
 
-import { withTheme } from '@material-ui/core/styles';
-import { Avatar, Divider, List, ListItem, ListItemAvatar, ListItemText, Button } from '@material-ui/core';
-import { Dialog, DialogTitle, DialogContent, DialogActions, Box, TextField } from '@material-ui/core';
+import { withTheme } from '@mui/material';
+import { Avatar, Divider, List, ListItem, ListItemAvatar, ListItemText, Button } from '@mui/material';
+import { Dialog, DialogTitle, DialogContent, DialogActions, Box, TextField } from '@mui/material';
 
-import SwapVerticalCircleIcon from '@material-ui/icons/SwapVerticalCircle';
-import AccessTimeIcon from '@material-ui/icons/AccessTime';
-import DNSIcon from '@material-ui/icons/Dns';
-import UpdateIcon from '@material-ui/icons/Update';
-import AvTimerIcon from '@material-ui/icons/AvTimer';
-import RefreshIcon from '@material-ui/icons/Refresh';
+import SwapVerticalCircleIcon from '@mui/icons-material/SwapVerticalCircle';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import DNSIcon from '@mui/icons-material/Dns';
+import UpdateIcon from '@mui/icons-material/Update';
+import AvTimerIcon from '@mui/icons-material/AvTimer';
+import RefreshIcon from '@mui/icons-material/Refresh';
 
 import { FormButton, HighlightAvatar } from '../components';
 import { isNtpActive, ntpStatusHighlight, ntpStatus } from './NTPStatus';

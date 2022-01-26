@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-import { Avatar, Badge } from '@material-ui/core';
-import { List, ListItem, ListItemIcon, ListItemText, ListItemAvatar } from '@material-ui/core';
+import { Avatar, Badge } from '@mui/material';
+import { List, ListItem, ListItemIcon, ListItemText, ListItemAvatar } from '@mui/material';
 
-import WifiIcon from '@material-ui/icons/Wifi';
-import LockIcon from '@material-ui/icons/Lock';
-import LockOpenIcon from '@material-ui/icons/LockOpen';
+import WifiIcon from '@mui/icons-material/Wifi';
+import LockIcon from '@mui/icons-material/Lock';
+import LockOpenIcon from '@mui/icons-material/LockOpen';
 
 import { isNetworkOpen, networkSecurityMode } from './WiFiSecurityModes';
 import { WiFiConnectionContext } from './WiFiConnectionContext';

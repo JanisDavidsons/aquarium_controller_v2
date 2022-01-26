@@ -1,8 +1,8 @@
 import React from 'react';
 import { ValidatorForm } from 'react-material-ui-form-validator';
 
-import { Box, Typography } from '@material-ui/core';
-import SaveIcon from '@material-ui/icons/Save';
+import { Box, Typography } from '@mui/material';
+import SaveIcon from '@mui/icons-material/Save';
 
 import { withAuthenticatedContext } from '../authentication';
 import { PasswordValidator, FormActions, FormButton } from '../components';

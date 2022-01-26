@@ -1,8 +1,10 @@
 import React  from 'react';
 
 import { CssBaseline } from '@mui/material';
-import { MuiThemeProvider, createTheme, StylesProvider } from '@material-ui/core/styles';
-import { blueGrey, indigo, orange, red, green } from '@material-ui/core/colors';
+import { createTheme } from '@mui/material/styles';
+import { ThemeProvider, StylesProvider } from '@mui/styles';
+
+import { blueGrey, indigo, orange, red, green } from '@mui/material/colors';
 
 const theme = createTheme({
     palette: {
@@ -27,10 +29,10 @@ function CustomMuiTheme (props) {
 
     return (
         <StylesProvider>
-            <MuiThemeProvider theme={theme}>
+            <ThemeProvider theme={theme}>
                 <CssBaseline/>
                 {props.children}
-            </MuiThemeProvider>
+            </ThemeProvider>
         </StylesProvider>
     );
 }

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import {List, ListItem, ListItemIcon, ListItemText} from '@material-ui/core';
-import SettingsRemoteIcon from '@material-ui/icons/SettingsRemote';
+import {List, ListItem, ListItemIcon, ListItemText} from '@mui/material';
+import SettingsRemoteIcon from '@mui/icons-material/SettingsRemote';
 
 import { PROJECT_PATH } from '../api';
 

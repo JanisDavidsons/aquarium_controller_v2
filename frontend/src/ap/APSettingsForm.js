@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 import { TextValidator, ValidatorForm, SelectValidator } from 'react-material-ui-form-validator';
 
-import MenuItem from '@material-ui/core/MenuItem';
-import SaveIcon from '@material-ui/icons/Save';
+import MenuItem from '@mui/material/MenuItem';
+import SaveIcon from '@mui/icons-material/Save';
 
 import { PasswordValidator, FormActions, FormButton } from '../components';
 

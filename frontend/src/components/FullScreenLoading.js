@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { CircularProgress } from '@mui/material';
-import { Typography} from '@material-ui/core';
-import { makeStyles, createStyles } from '@material-ui/styles';
+import { Typography} from '@mui/material';
+import { makeStyles, createStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme) => createStyles({
     fullScreenLoading: {

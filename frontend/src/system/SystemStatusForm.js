@@ -1,18 +1,18 @@
 import React, { Component, Fragment } from 'react';
 
-import { Avatar, Button, Divider, Dialog, DialogTitle, DialogContent, DialogActions, Box } from '@material-ui/core';
-import { List, ListItem, ListItemAvatar, ListItemText } from '@material-ui/core';
+import { Avatar, Button, Divider, Dialog, DialogTitle, DialogContent, DialogActions, Box } from '@mui/material';
+import { List, ListItem, ListItemAvatar, ListItemText } from '@mui/material';
 
-import DevicesIcon from '@material-ui/icons/Devices';
-import MemoryIcon from '@material-ui/icons/Memory';
-import ShowChartIcon from '@material-ui/icons/ShowChart';
-import SdStorageIcon from '@material-ui/icons/SdStorage';
-import FolderIcon from '@material-ui/icons/Folder';
-import DataUsageIcon from '@material-ui/icons/DataUsage';
-import AppsIcon from '@material-ui/icons/Apps';
-import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
-import RefreshIcon from '@material-ui/icons/Refresh';
-import SettingsBackupRestoreIcon from '@material-ui/icons/SettingsBackupRestore';
+import DevicesIcon from '@mui/icons-material/Devices';
+import MemoryIcon from '@mui/icons-material/Memory';
+import ShowChartIcon from '@mui/icons-material/ShowChart';
+import SdStorageIcon from '@mui/icons-material/SdStorage';
+import FolderIcon from '@mui/icons-material/Folder';
+import DataUsageIcon from '@mui/icons-material/DataUsage';
+import AppsIcon from '@mui/icons-material/Apps';
+import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
+import RefreshIcon from '@mui/icons-material/Refresh';
+import SettingsBackupRestoreIcon from '@mui/icons-material/SettingsBackupRestore';
 
 import { redirectingAuthorizedFetch, withAuthenticatedContext } from '../authentication';
 import { FormButton, ErrorButton } from '../components';

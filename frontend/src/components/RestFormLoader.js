@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { makeStyles, createStyles } from '@material-ui/core/styles';
-import { Button, LinearProgress, Typography } from '@material-ui/core';
+import { makeStyles, createStyles } from '@mui/styles';
+import { Button, LinearProgress, Typography } from '@mui/material';
 
 const useStyles = makeStyles((theme) =>
   createStyles({

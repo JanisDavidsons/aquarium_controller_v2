@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { Navigate, Route, Routes } from 'react-router';
 import { SnackbarProvider } from 'notistack';
 import { IconButton } from '@mui/material';
-import CloseIcon from '@material-ui/icons/Close';
+import CloseIcon from '@mui/icons-material/Close';
 
 import AppRouting from './AppRouting';
 import { PROJECT_NAME } from './api';

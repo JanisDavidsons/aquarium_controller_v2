@@ -1,5 +1,5 @@
 import React from 'react';
-import MenuItem from '@material-ui/core/MenuItem';
+import MenuItem from '@mui/material/MenuItem';
 
 export const TIME_ZONES = {
   "Africa/Abidjan": "GMT0",

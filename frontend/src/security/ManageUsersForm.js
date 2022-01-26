@@ -1,16 +1,25 @@
 import React, { Fragment } from 'react';
 import { ValidatorForm } from 'react-material-ui-form-validator';
 
-import { Table, TableBody, TableCell, TableHead, TableFooter, TableRow, withWidth, isWidthDown } from '@material-ui/core';
-import { Box, Button, Typography, } from '@material-ui/core';
+import { 
+  Table, 
+  TableBody, 
+  TableCell, 
+  TableHead, 
+  TableFooter, 
+  TableRow
+  // withWidth, 
+  // isWidthDown 
+} from '@mui/material';
+import { Box, Button, Typography, } from '@mui/material';
 
-import EditIcon from '@material-ui/icons/Edit';
-import DeleteIcon from '@material-ui/icons/Delete';
-import CloseIcon from '@material-ui/icons/Close';
-import CheckIcon from '@material-ui/icons/Check';
-import IconButton from '@material-ui/core/IconButton';
-import SaveIcon from '@material-ui/icons/Save';
-import PersonAddIcon from '@material-ui/icons/PersonAdd';
+import EditIcon from '@mui/icons-material/Edit';
+import DeleteIcon from '@mui/icons-material/Delete';
+import CloseIcon from '@mui/icons-material/Close';
+import CheckIcon from '@mui/icons-material/Check';
+import IconButton from '@mui/material/IconButton';
+import SaveIcon from '@mui/icons-material/Save';
+import PersonAddIcon from '@mui/icons-material/PersonAdd';
 
 import { withAuthenticatedContext } from '../authentication';
 import { FormActions, FormButton, extractEventValue } from '../components';
@@ -99,7 +108,10 @@ class ManageUsersForm extends React.Component {
     return (
       <Fragment>
         <ValidatorForm onSubmit={this.onSubmit}>
-          <Table size="small" padding={isWidthDown('xs', width) ? "none" : "default"}>
+          <Table 
+          size="small" 
+          // padding={isWidthDown('xs', width) ? "none" : "default"}
+          >
             <TableHead>
               <TableRow>
                 <TableCell>Username</TableCell>
@@ -173,4 +185,7 @@ class ManageUsersForm extends React.Component {
 
 }
 
-export default withAuthenticatedContext(withWidth()(ManageUsersForm));
+export default withAuthenticatedContext(
+  // withWidth()
+  (ManageUsersForm)
+  );

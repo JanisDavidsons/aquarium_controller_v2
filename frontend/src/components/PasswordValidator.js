@@ -1,9 +1,9 @@
 import React from 'react';
 import { TextValidator } from 'react-material-ui-form-validator';
 
-import { withStyles, createStyles } from '@material-ui/core/styles';
-import { InputAdornment, IconButton } from '@material-ui/core';
-import {Visibility,VisibilityOff } from '@material-ui/icons';
+import { withStyles, createStyles } from '@mui/styles';
+import { InputAdornment, IconButton } from '@mui/material';
+import {Visibility,VisibilityOff } from '@mui/icons-material';
 
 const styles = createStyles({
   input: {
