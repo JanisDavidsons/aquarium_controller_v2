@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { withSnackbar } from 'notistack';
 import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator';
 
-import { withStyles, createStyles } from '@mui/material/styles';
+import { createStyles } from '@mui/material/styles';
+import { withStyles } from '@mui/styles';
 import { Paper, Typography, Fab } from '@mui/material';
 import ForwardIcon from '@mui/icons-material/Forward';
 

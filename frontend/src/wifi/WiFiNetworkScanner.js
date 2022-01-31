@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { withSnackbar } from 'notistack';
 
-import { createStyles, withStyles, Typography, LinearProgress } from '@mui/material';
+import { createStyles, Typography, LinearProgress } from '@mui/material';
+import { withStyles } from '@mui/styles';
 import PermScanWifiIcon from '@mui/icons-material/PermScanWifi';
 
 import { FormActions, FormButton, SectionContent } from '../components';

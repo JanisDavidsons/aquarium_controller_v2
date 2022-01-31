@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import moment from 'moment';
 
-import { withTheme } from '@mui/material';
+import { withTheme } from '@mui/styles';
 import { Avatar, Divider, List, ListItem, ListItemAvatar, ListItemText, Button } from '@mui/material';
 import { Dialog, DialogTitle, DialogContent, DialogActions, Box, TextField } from '@mui/material';
 
