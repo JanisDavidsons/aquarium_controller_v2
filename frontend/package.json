@@ -1,45 +1,78 @@
 {
-  "name": "webapp_aquarium_controller",
+  "name": "esp8266-react",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:8080",
   "dependencies": {
-    "@emotion/react": "^11.7.1",
-    "@emotion/styled": "^11.6.0",
-    "@material-ui/icons": "^4.11.2",
-    "@mui/icons-material": "^5.3.1",
-    "@mui/material": "^5.2.8",
-    "@mui/styles": "^5.3.0",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/icons-material": "^5.8.0",
+    "@mui/material": "^5.8.0",
+    "@types/lodash": "^4.14.176",
+    "@types/node": "^16.11.14",
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.4",
+    "async-validator": "^4.1.1",
+    "axios": "^0.27.2",
+    "http-proxy-middleware": "^2.0.1",
     "jwt-decode": "^3.1.2",
     "lodash": "^4.17.21",
-    "mime-types": "^2.1.34",
-    "moment": "^2.29.1",
-    "notistack": "^2.0.3",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-dropzone": "^11.5.1",
-    "react-form-validator-core": "^1.1.1",
-    "react-material-ui-form-validator": "^3.0.0",
-    "react-router": "^6.2.1",
-    "react-router-dom": "^6.2.1",
-    "react-scripts": "4.0.3",
+    "notistack": "^2.0.5",
+    "parse-ms": "^3.0.0",
+    "react": "^18.1.0",
+    "react-app-rewired": "^2.1.8",
+    "react-dom": "^18.1.0",
+    "react-dropzone": "^11.4.2",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
     "sockette": "^2.0.6",
-    "web-vitals": "^1.0.1",
-    "zlib": "^1.0.5"
+    "typescript": "^4.6.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "rules": {
+      "eol-last": 1,
+      "react/jsx-closing-bracket-location": 1,
+      "react/jsx-closing-tag-location": 1,
+      "react/jsx-wrap-multilines": 1,
+      "react/jsx-curly-newline": 1,
+      "no-multiple-empty-lines": [
+        1,
+        {
+          "max": 1
+        }
+      ],
+      "no-trailing-spaces": 1,
+      "semi": 1,
+      "no-extra-semi": 1,
+      "react/jsx-max-props-per-line": [
+        1,
+        {
+          "when": "multiline"
+        }
+      ],
+      "react/jsx-first-prop-new-line": [
+        1,
+        "multiline"
+      ],
+      "@typescript-eslint/no-shadow": 1,
+      "max-len": [
+        1,
+        {
+          "code": 140
+        }
+      ],
+      "arrow-parens": 1
+    }
   },
   "browserslist": {
     "production": [
@@ -52,8 +85,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "react-app-rewired": "^2.1.6"
   }
 }

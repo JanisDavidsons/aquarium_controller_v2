@@ -19,7 +19,7 @@ class LoginController extends AbstractController
 
         $credentials = $request->only(['email', 'password']);
 
-        if (! $token = Auth::attempt($credentials)) {
+        if (! $token = Auth::attempt($credentials,true)) {
             return response()->json(['message' => 'Unauthorized'], 401);
         }
 

@@ -1,4 +1,8 @@
-FROM arm32v7/ubuntu:latest
+# for orange pi
+#FROM arm32v7/ubuntu:latest
+
+#for mac
+FROM ubuntu:20.04
 
 ENV DEBIAN_FRONTEND noninteractive
 

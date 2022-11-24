@@ -1,0 +1,8 @@
+/frontend/node_modules/
+/node_modules/
+/.idea/.gitignore
+/.idea/codeStyles/Project.xml
+/.idea/codeStyles/codeStyleConfig.xml
+/.idea/modules.xml
+/.idea/php.xml
+/.idea/vcs.xml
