@@ -28,12 +28,13 @@ $router->get('/features', function (){
             'upload_firmware' => false,
         ])->header('Access-Control-Allow-Origin', '*');
 });
-
+$router->get('/lightState','Project\Light\ViewLightController' );
+$router->post('/lightState','Project\Light\CreateLightController' );
 
 $router->post('/signIn', 'Auth\LoginController');
 $router->group(['middleware' => 'auth'], function() use ($router){
     $router->get('/verifyAuthorization','Auth\VerifyAuthorizationController' );
-    $router->get('//lightState','Auth\VerifyAuthorizationController' );
+//    $router->get('/lightState','Project\DemoProjectController' );
 });
 
 

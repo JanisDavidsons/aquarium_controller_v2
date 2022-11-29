@@ -1,5 +1,9 @@
 <?php
 
+use App\Models\Projects\Light\DoctrineLightRepository;
+use App\Models\Projects\Light\Interfaces\LightRepositoryInterface;
+use Dotenv\Dotenv;
+
 require_once __DIR__.'/../vendor/autoload.php';
 
 (new Laravel\Lumen\Bootstrap\LoadEnvironmentVariables(
@@ -46,6 +50,12 @@ $app->singleton(
     Illuminate\Contracts\Console\Kernel::class,
     App\Console\Kernel::class
 );
+
+$app->bind(LightRepositoryInterface::class, function ($app){
+    return new DoctrineLightRepository(
+        $app->make(\LaravelDoctrine\ORM\Facades\EntityManager::class)
+    );
+});
 
 /*
 |--------------------------------------------------------------------------
@@ -95,8 +105,15 @@ $app->configure('auth');
  $app->register(App\Providers\AppServiceProvider::class);
  $app->register(App\Providers\AuthServiceProvider::class);
  $app->register(Tymon\JWTAuth\Providers\LumenServiceProvider::class);
+ $app->register(LaravelDoctrine\ORM\DoctrineServiceProvider::class);
+
+ class_alias('LaravelDoctrine\ORM\Facades\EntityManager', 'EntityManager');
+ class_alias('LaravelDoctrine\ORM\Facades\Registry', 'Registry');
+ class_alias('LaravelDoctrine\ORM\Facades\Doctrine', 'Doctrine');
 
 // $app->register(App\Providers\EventServiceProvider::class);
+
+    Dotenv::createImmutable(__DIR__.'/../');
 
 /*
 |--------------------------------------------------------------------------

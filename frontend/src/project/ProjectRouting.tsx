@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { Navigate, Routes, Route } from 'react-router-dom';
 import DemoProject from "./DemoProject";
 
-// import DemoProject from './DemoProject';
+// import Light from './Light';
 
 const ProjectRouting: FC = () => {
   return (

@@ -5,10 +5,12 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": "^7.3|^8.0",
+        "php": "^8.0",
+        "laravel-doctrine/orm": "^1.8",
         "laravel/fortify": "^1.8",
-        "laravel/lumen-framework": "^8.0",
-        "tymon/jwt-auth": "dev-develop"
+        "laravel/lumen-framework": "^9.1.5",
+        "nesbot/carbon": "^2.63",
+        "tymon/jwt-auth": "^1.0.2"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",

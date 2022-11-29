@@ -6,3 +6,4 @@
 /.idea/modules.xml
 /.idea/php.xml
 /.idea/vcs.xml
+/frontend/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/IBMDB2/Connection.php
