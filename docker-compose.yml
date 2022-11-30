@@ -36,7 +36,10 @@ services:
     build:
       context: ./backend
     volumes:
-      - ./backend:/backend
+#      for controller
+      - ./backend/app:/backend/app
+#      for mac
+#      - ./backend:/backend
 
 volumes:
   mysql-data:
