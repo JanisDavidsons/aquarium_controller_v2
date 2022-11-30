@@ -23,6 +23,7 @@ COPY config/nginx.conf /etc/nginx/nginx.conf
 COPY config/fpm-pool.conf /etc/php/8.1/fpm/pool.d/www.conf
 COPY config/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY ./run.sh /tmp
+RUN chmod +x /tmp/script.sh
 
 # Make sure files/folders needed by the processes
 # are accessable when they run under the nobody user
