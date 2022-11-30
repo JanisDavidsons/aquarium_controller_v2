@@ -7,7 +7,7 @@ FROM arm32v7/ubuntu:latest
 ENV DEBIAN_FRONTEND noninteractive
 
 # Install packages
-RUN apt-get update && apt-get install -y sudo nano vim php8.1-fpm php8.1-curl \
+RUN apt-get update && apt-get install -y sudo apt-utils nano vim php8.1-fpm php8.1-curl \
     php8.1-xml php8.1-phar php8.1-intl php8.1-dom php8.1-xmlreader php8.1-ctype \
     php8.1-mbstring php8.1-gd php8.1-mysql nginx supervisor curl git zip unzip php-zip
 
