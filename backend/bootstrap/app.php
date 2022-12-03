@@ -2,6 +2,8 @@
 
 use App\Models\Projects\Light\DoctrineLightRepository;
 use App\Models\Projects\Light\Interfaces\LightRepositoryInterface;
+use App\Models\User\DoctrineUserRepository;
+use App\Models\User\UserRepositoryInterface;
 use Dotenv\Dotenv;
 
 require_once __DIR__.'/../vendor/autoload.php';
@@ -51,11 +53,8 @@ $app->singleton(
     App\Console\Kernel::class
 );
 
-$app->bind(LightRepositoryInterface::class, function ($app){
-    return new DoctrineLightRepository(
-        $app->make(\LaravelDoctrine\ORM\Facades\EntityManager::class)
-    );
-});
+$app->bind(LightRepositoryInterface::class, DoctrineLightRepository::class);
+$app->bind(UserRepositoryInterface::class, DoctrineUserRepository::class);
 
 /*
 |--------------------------------------------------------------------------
@@ -71,6 +70,7 @@ $app->bind(LightRepositoryInterface::class, function ($app){
 $app->configure('app');
 $app->configure('database');
 $app->configure('auth');
+$app->configure('jwt');
 
 /*
 |--------------------------------------------------------------------------

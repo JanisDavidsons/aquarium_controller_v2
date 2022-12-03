@@ -30,7 +30,7 @@ return [
             ],
             'paths' => [
                 __DIR__ . '/doctrine/xml/Light' => 'App\Models\Projects\Light',
-//                __DIR__ . '/doctrine/xml/User'  => 'App\Models',
+                __DIR__ . '/doctrine/xml/User'  => 'App\Models\User',
             ],
             'repository' => Doctrine\ORM\EntityRepository::class,
             'proxies'    => [

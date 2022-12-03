@@ -40,6 +40,8 @@ WORKDIR /backend
 
 COPY ./ /backend/
 
+RUN chown -R nobody:nobody /backend/storage
+
 # Switch to use a non-root user from here on
 USER nobody
 

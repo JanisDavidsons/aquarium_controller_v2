@@ -1,43 +1,42 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\User;
 
+use Carbon\Carbon;
+use Carbon\CarbonImmutable;
+use DateTime;
+use DateTimeImmutable;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 use Laravel\Lumen\Auth\Authorizable;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 
-class User extends Model implements AuthenticatableContract, AuthorizableContract, JWTSubject
+class User implements AuthenticatableContract, AuthorizableContract, JWTSubject
 {
     use Authenticatable, Authorizable, HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'name', 'email',
-    ];
+    private int $id;
+    private string $emailVerifiedAt;
+    private string $rememberToken;
 
-    /**
-     * The attributes excluded from the model's JSON form.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password',
-    ];
+    public function __construct(
+        private string $name,
+        private string $email,
+        private string $password,
+        private DateTimeImmutable $createdAt = new CarbonImmutable('now'),
+        private DateTime $updatedAt          = new Carbon('now'),
+    )
+    {
+    }
 
     /**
      * Get the identifier that will be stored in the subject claim of the JWT.
      */
     public function getJWTIdentifier()
     {
-        return $this->getKey();
+        return $this->id;
     }
 
     /**

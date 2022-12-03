@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\AbstractController;
+use App\Models\User\User;
 use Illuminate\Http\JsonResponse;
-use App\Models\User;
 
 class ListAllController extends AbstractController
 {

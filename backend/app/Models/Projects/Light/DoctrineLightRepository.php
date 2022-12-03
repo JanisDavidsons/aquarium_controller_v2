@@ -8,10 +8,6 @@ use LaravelDoctrine\ORM\Facades\EntityManager;
 
 class DoctrineLightRepository implements LightRepositoryInterface
 {
-    public function __construct(protected EntityManager $emr)
-    {
-    }
-
     public function all(): array
     {
         return EntityManager::getRepository(Light::class)->findAll();

@@ -3,13 +3,13 @@
                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                   xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
-    <entity table="users" name="App\Models\User">
-
-        <field name="incrementalId" column="incremental_id" type="integer">
+    <entity table="users" name="App\Models\User\User">
+        <id name="id" column="id" type="integer">
+            <generator/>
             <options>
                 <option name="unsigned">true</option>
             </options>
-        </field>
+        </id>
         <field name="name"/>
         <field name="email"/>
         <field name="emailVerifiedAt" column="email_verified_at"/>
