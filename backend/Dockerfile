@@ -1,8 +1,4 @@
-# for orange pi
-FROM arm32v7/ubuntu:latest
-
-#for mac
-#FROM ubuntu:22.10
+FROM ubuntu:22.10
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -14,7 +10,6 @@ RUN apt-get update && apt-get install -y sudo nano vim php8.1-fpm php8.1-curl \
 RUN mkdir -p /var/tmp/nginx
 RUN mkdir -p /var/log/nginx
 RUN mkdir -p /etc/supervisor/conf.d/
-RUN mkdir -p /backend
 
 RUN curl -sS https://getcomposer.org/installer | php -- \
 --install-dir=/usr/bin --filename=composer && chmod +x /usr/bin/composer
@@ -24,8 +19,11 @@ COPY config/fpm-pool.conf /etc/php/8.1/fpm/pool.d/www.conf
 COPY config/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY ./run.sh /tmp
 
-# Make sure files/folders needed by the processes
-# are accessable when they run under the nobody user
+# Add application
+WORKDIR /backend
+
+COPY ./ /backend/
+
 RUN groupadd nobody
 
 RUN chown -R nobody:nobody /run && \
@@ -34,13 +32,6 @@ RUN chown -R nobody:nobody /run && \
    chown -R nobody:nobody /var/log/nginx && \
    chown -R nobody:nobody /backend && \
    chown -R nobody:nobody /usr/bin
-
-# Add application
-WORKDIR /backend
-
-COPY ./ /backend/
-
-RUN chown -R nobody:nobody /backend/storage
 
 # Switch to use a non-root user from here on
 USER nobody
