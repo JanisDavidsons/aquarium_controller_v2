@@ -1,7 +1,5 @@
 version: "3.7"
-
 services:
-
   mysql:
     image: yobasystems/alpine-mariadb
     container_name: mysql
@@ -17,24 +15,26 @@ services:
     volumes:
       - mysql-data:/var/lib/mysql
     restart: always
-
   nginx:
-    restart: always
+    container_name: nginx
     build:
       context: ./nginx
     ports:
       - '8080:80'
-
+    restart: always
   frontend:
+    container_name: frontend
     build:
       context: ./frontend
     volumes:
       - /app/node_modules
       - ./frontend:/app
-
+    restart: always
   backend:
+    container_name: backend
     build:
       context: ./backend
-
+    restart: always
 volumes:
   mysql-data:
+    driver: local
